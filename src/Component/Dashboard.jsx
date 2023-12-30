@@ -81,10 +81,10 @@ function Dashboard({ user, setUser }) {
                 </thead>
                 <tbody>
                 {
-                  user.map((e) => {
+                  user.map((e,i) => {
                     return (
                       <tr key={e.id}>
-                          <td>{e.id}</td>
+                          <td>{i+1}</td>
                           <td>{e.name}</td>
                           <td>{e.email}</td>
                           <td>{e.mobile}</td>

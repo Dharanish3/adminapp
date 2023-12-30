@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom"
-import Dashboard from "./Dashboard";
+
 
 function Sidebar() {
   return (
@@ -29,6 +29,13 @@ function Sidebar() {
             <span>Dashboard</span>
           </Link>
         </li>
+        <li className="nav-item active">
+          <Link className="nav-link" to="/add-user">
+            <i className="fas fa-fw fa-tachometer-alt"></i>
+            <span>Add User</span>
+          </Link>
+        </li>
+      
         <li className="nav-item active">
           <Link className="nav-link" to="/class">
             <i className="fas fa-fw fa-tachometer-alt"></i>

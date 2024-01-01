@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState ,useContext} from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import {  useNavigate , useParams } from "react-router-dom";
+import {UserContexts} from "../utils/UserContext";
 
-function Edituser({user, setUser}) {
+function Edituser() {
 
+  const {user,setUser} = useContext(UserContexts)
   let navigate = useNavigate() // 
   let params = useParams() // return a object
 

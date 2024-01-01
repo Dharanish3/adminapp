@@ -1,11 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
 import Card from "./Card";
 import Table from "react-bootstrap/Table";
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from "react-router-dom";
+import{ UserContexts} from "../utils/UserContext";
 
-function Dashboard({ user, setUser }) {
+function Dashboard() {
   let navigate = useNavigate()
+  let {user,setUser} = useContext(UserContexts)
   const data = [
     {
       name: "Earnings (Monthly)",

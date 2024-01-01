@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState ,useContext } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import {  useNavigate } from "react-router-dom";
+import {UserContexts} from "../utils/UserContext";
 
-function Adduser({user, setUser}) {
+function Adduser() {
 
+  const {user,setUser} = useContext(UserContexts)
   let navigate = useNavigate()
   const [name , setName] = useState('')
   const [email , setEmail] = useState('')
